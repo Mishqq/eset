@@ -1,2 +1,1 @@
-# testTaskFromKasp
 # eset
