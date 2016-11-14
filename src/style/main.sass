@@ -1,0 +1,193 @@
+@import "reset"
+@import "helpers/fonts"
+@import "helpers/sprite"
+@import "helpers/mixins"
+
+@import "components/menu"
+@import "components/blockquote"
+@import "components/card"
+@import "components/btn"
+@import "components/modal"
+@import "components/form"
+
+ul, li
+	list-style: none
+	padding: 0
+	margin: 0
+
+.page
+	font: 600 14px/1.4 'ProximaNova-Light'
+
+.adp-content
+	position: relative
+	margin: 0 auto
+	max-width: 940px
+	min-width: 480px
+
+	@media screen and (max-width: 1000px)
+		padding: 0 20px
+
+	&_text-center
+		text-align: center
+
+	&_mg-bt-50
+		margin-bottom: 50px
+
+.header
+	position: relative
+	padding-top: 30px
+	height: 106px
+	&__logo
+		@media screen and (max-width: 700px)
+			margin-bottom: 5px
+			text-align: center
+	&__nav
+		position: absolute
+		right: 0
+		top: 10px
+		@include transition(all .5s .0s)
+		@media screen and (max-width: 700px)
+			position: relative
+			width: 100%
+			text-align: center
+
+.logo
+	position: relative
+	display: inline-block
+	font: bold 0 'Nexia Bold'
+	letter-spacing: -1px
+	text-transform: uppercase
+	&__f
+		display: inline-block
+		vertical-align: middle
+		color: #86c840
+		font-size: 24px
+	&__s
+		display: inline-block
+		vertical-align: middle
+		color: #222
+		font-size: 24px
+	&:before
+		content: ''
+		margin-right: 10px
+		display: inline-block
+		vertical-align: middle
+		@include sprite($icon-logo)
+
+.main-content
+
+.title
+	position: relative
+	margin: 50px 0
+	padding-left: 24px
+	line-height: 1
+	&:before
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		width: 6px
+		height: 100%
+		background-color: #86c840
+	&__main
+		color: #222
+		font: 400 36px "NexaSlab-xBold"
+	&__note
+		color: #aaa
+		font: 600 16px "ProximaNova-Light"
+
+.card-list
+	margin-left: -20px
+	font-size: 0
+	letter-spacing: -1px
+	@media screen and (max-width: 1000px)
+		text-align: center
+	&__item
+		display: inline-block
+		vertical-align: top
+		font-size: 14px
+		letter-spacing: normal
+		margin: 0 0 40px 20px
+		@include transition(all .5s .0s)
+		@media screen and (min-width: 480px) and (max-width: 600px)
+			margin-bottom: 5px
+
+
+.footer
+	text-align: center
+	display: block
+	height: 115px
+	&__nav
+		margin-top: 10px
+		float: left
+		@media screen and (min-width: 500px) and (max-width: 900px)
+			margin-bottom: 20px
+			float: none
+			text-align: center
+	&__social
+		float: left
+		margin-left: 50px
+		@media screen and (min-width: 500px) and (max-width: 900px)
+			margin-left: 10px
+		@media screen and (max-width: 500px)
+			float: none
+			margin-bottom: 20px
+	&__copyright
+		margin-top: 10px
+		float: right
+		@media screen and (min-width: 500px) and (max-width: 900px)
+			float: right
+		@media screen and (max-width: 500px)
+			float: none
+
+
+
+.social
+	&__item
+		display: inline-block
+		vertical-align: top
+		margin: 0 5px
+		a
+			display: block
+			position: relative
+			width: 40px
+			height: 40px
+			border-radius: 50%
+			background-color: #000
+			&:hover
+				opacity: .75
+		&_tw a,&_fb a,&_pt a,&_g a
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				left: 50%
+				top: 50%
+		&_tw a
+			&:before
+				margin-top: -7px
+				margin-left: -8px
+				@include sprite($icon-social-twitter)
+		&_fb a
+			&:before
+				margin-top: -9px
+				margin-left: -5px
+				@include sprite($icon-social-facebook)
+		&_pt a
+			&:before
+				margin-top: -9px
+				margin-left: -7px
+				@include sprite($icon-social-pinterest)
+		&_g a
+			&:before
+				margin-top: -8px
+				margin-left: -5px
+				@include sprite($icon-social-google)
+
+.req
+	&__title
+		margin-bottom: 10px
+		color: black
+		font: 400 17px "NexaSlab-xBold"
+	&__row
+		margin-bottom: 10px

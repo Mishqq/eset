@@ -1,0 +1,62 @@
+@import "../helpers/fonts"
+@import "../helpers/sprite"
+@import "../helpers/mixins"
+
+.qoute
+	margin-bottom: 50px
+	background-color: #f1f1f1
+	&__content
+		position: relative
+		padding: 41px 90px
+		font: 300 28px "ProximaNova-Light"
+		color: #111
+		text-align: center
+		@include transition(all .5s .0s)
+
+		&:before, &:after
+			content: ''
+			@include transition(all .5s .0s)
+		&:before
+			top: 45px
+			left: 0
+			@include round-btn(46px, #86c840, 'before')
+		&:after
+			bottom: 45px
+			right: 0
+			@include round-btn(46px, #86c840, 'after')
+
+		@media screen and (min-width: 800px) and (max-width: 1000px)
+			padding: 30px 50px
+			font-size: 26px
+			&:before
+				top: 25px
+				left: 0
+			&:after
+				bottom: 25px
+				right: 0
+		@media screen and (max-width: 800px)
+			font-size: 22px
+			&:before
+				top: 25px
+				left: 0
+			&:after
+				bottom: 25px
+				right: 0
+		@media screen and (max-width: 620px)
+			padding: 20px 70px
+			font-size: 20px
+			&:before
+				top: 20px
+				left: -5px
+			&:after
+				bottom: 20px
+				right: -5px
+		@media screen and (max-width: 500px)
+			padding: 20px 50px
+			font-size: 18px
+			&:before
+				top: 10px
+				left: -15px
+			&:after
+				bottom: 10px
+				right: -15px

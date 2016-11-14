@@ -1,0 +1,23 @@
+@import "../helpers/fonts"
+@import "../helpers/sprite"
+@import "../helpers/mixins"
+
+.form
+	&__row
+		margin-top: 25px
+		&:first-child
+			margin-top: 0
+	&__text-input, &__textarea
+		padding: 5px 10px
+		border: 1px solid #aaa
+		border-radius: 4px
+		font: 400 14px "ProximaNova-Light"
+	&__text-input
+		width: 230px
+		height: 36px
+		line-height: 36px
+	&__textarea
+		max-width: 520px
+		min-width: 350px
+		height: 148px
+	&__submit
