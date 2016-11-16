@@ -1,5 +1,11 @@
 @import "sprite"
 
+@mixin transform($transform...)
+    -ms-transform:      $transform
+    -webkit-transform:  $transform
+    -o-transform:       $transform
+    transform:          $transform
+
 @mixin transition($transition...)
 	-moz-transition:    $transition
 	-o-transition:      $transition
