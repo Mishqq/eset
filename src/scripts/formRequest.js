@@ -39,6 +39,7 @@
 	}
 
 	function setContentToModal(data){
+		requestModalContent.html('');
 		if(data){
 			$(template.done).appendTo(requestModalContent);
 			requestModal.find('.serverRequest').html(data.id);
